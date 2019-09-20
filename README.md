@@ -24,3 +24,13 @@ The component needs that the attribute statuscode is present on the view.
 ### Incompatible with
 - Specials status change: WonOpportunity, IncidentResolution, CloseQuoteRequest, etc..
 - Views without the attribute statuscode.
+
+### \node_modules\@types\xrm\index.d.ts\Xrm.ExecuteResponse
+Change the attribute body from 'string' to 'ReadableStream':
+```typescript
+ interface ExecuteResponse {
+        /**
+         * (Optional). Object.Response body.
+         */
+        body: ReadableStream;
+```
