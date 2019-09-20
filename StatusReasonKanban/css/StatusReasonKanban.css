@@ -1,0 +1,36 @@
+table.Container
+{
+    width: auto;
+    height: 100%;
+    background-color: transparent;
+}
+
+td.Option
+{
+    width: 300px;
+    height: 300px;
+    margin: 5px;
+    text-align: center;
+    vertical-align: top;
+    border-right: solid;
+}
+
+div.RecordGrab
+{
+    height: auto;
+    background-color: whitesmoke;
+    margin: 5px;
+    padding: 5px;
+    cursor: -webkit-grab; 
+    cursor: grab;
+}
+
+div.RecordGrabbing
+{
+    height: auto;
+    background-color: whitesmoke;
+    margin: 5px;
+    padding: 5px;
+    cursor: -webkit-grabbing; 
+    cursor: grabbing;
+}

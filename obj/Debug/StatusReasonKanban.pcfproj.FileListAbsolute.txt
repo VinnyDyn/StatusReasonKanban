@@ -1,0 +1,2 @@
+D:\Git\PowerApps\StatusReasonKanban\obj\Debug\StatusReasonKanban.pcfprojAssemblyReference.cache
+D:\Git\PowerApps\StatusReasonKanban\obj\Debug\StatusReasonKanban.pcfproj.CoreCompileInputs.cache

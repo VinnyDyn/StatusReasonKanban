@@ -1,0 +1,115 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.6.2": {
+      "Microsoft.PowerApps.MSBuild.Pcf/0.4.3": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.PowerApps.MSBuild.Pcf.props": {},
+          "build/Microsoft.PowerApps.MSBuild.Pcf.targets": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.2/win": {
+      "Microsoft.PowerApps.MSBuild.Pcf/0.4.3": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.PowerApps.MSBuild.Pcf.props": {},
+          "build/Microsoft.PowerApps.MSBuild.Pcf.targets": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.2/win-x64": {
+      "Microsoft.PowerApps.MSBuild.Pcf/0.4.3": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.PowerApps.MSBuild.Pcf.props": {},
+          "build/Microsoft.PowerApps.MSBuild.Pcf.targets": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.2/win-x86": {
+      "Microsoft.PowerApps.MSBuild.Pcf/0.4.3": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.PowerApps.MSBuild.Pcf.props": {},
+          "build/Microsoft.PowerApps.MSBuild.Pcf.targets": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Microsoft.PowerApps.MSBuild.Pcf/0.4.3": {
+      "sha512": "w/nu1AVrY7ZsYrxaqFEVKXnNCUPJiTZ+p3DqBKx0jy10YtNTYuzdc2Nz1iiF70bgXuWGn7xo0LTcVA99gWXYsQ==",
+      "type": "package",
+      "path": "microsoft.powerapps.msbuild.pcf/0.4.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "3rdPartyNotice.txt",
+        "LICENSE.txt",
+        "build/Microsoft.PowerApps.MSBuild.Pcf.props",
+        "build/Microsoft.PowerApps.MSBuild.Pcf.targets",
+        "microsoft.powerapps.msbuild.pcf.0.4.3.nupkg.sha512",
+        "microsoft.powerapps.msbuild.pcf.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.6.2": [
+      "Microsoft.PowerApps.MSBuild.Pcf >= 0.*"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\vinicius.basile\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\Git\\PowerApps\\StatusReasonKanban\\StatusReasonKanban.pcfproj",
+      "projectName": "StatusReasonKanban",
+      "projectPath": "D:\\Git\\PowerApps\\StatusReasonKanban\\StatusReasonKanban.pcfproj",
+      "packagesPath": "C:\\Users\\vinicius.basile\\.nuget\\packages\\",
+      "outputPath": "D:\\Git\\PowerApps\\StatusReasonKanban\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\vinicius.basile\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net462"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nugetfiap14.azurewebsites.net/nuget": {}
+      },
+      "frameworks": {
+        "net462": {
+          "projectReferences": {}
+        }
+      }
+    },
+    "frameworks": {
+      "net462": {
+        "dependencies": {
+          "Microsoft.PowerApps.MSBuild.Pcf": {
+            "target": "Package",
+            "version": "[0.*, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}
