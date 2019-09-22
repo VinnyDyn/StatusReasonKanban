@@ -14,6 +14,12 @@ Convert a simple view to a Kanban.
 ### Prerequisites
 The component needs that the attribute statuscode is present on the view.
 
+#### Ready to use
+The [managed](https://github.com/VinnyDyn/StatusReasonKanban/releases/download/1.0.0/VinnyBControls_1_0_0_0_managed.zip) solution is ideal for non developers. Import and use.
+
+#### Developers
+The PCF call a Action (process) to obtain informations about the statuscode of entity, import the [unmanaged](https://github.com/VinnyDyn/StatusReasonKanban/releases/download/1.0.0/VinnyBControls_1_0_0_0.zip) solution with the action 'vnb_RetrieveOptionSetMetadata' to tests.
+
 ### Features
 - All options are based on statusocde.
 - Drag and drop the cards between the status.
