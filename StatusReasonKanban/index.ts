@@ -6,7 +6,6 @@ import { OptionSetMetadata } from "./OptionSetMetadata";
 import { ActionResponse } from "./ActionResponse";
 import { UpdateRequest } from "./UpdateRequest";
 import { StatelessComponent } from "react";
-import { Helper } from "./Helper";
 type DataSet = ComponentFramework.PropertyTypes.DataSet;
 
 export class StatusReasonKanban implements ComponentFramework.StandardControl<IInputs, IOutputs> {
@@ -17,6 +16,7 @@ export class StatusReasonKanban implements ComponentFramework.StandardControl<II
 	private _container : HTMLTableElement;
 	private _context : ComponentFramework.Context<IInputs>;
 	private _entityType : string;
+	private _entitySetName : string;
 
 	/**
 	 * Empty constructor.
@@ -37,6 +37,7 @@ export class StatusReasonKanban implements ComponentFramework.StandardControl<II
 	public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement)
 	{
 		this._entityType =context.parameters.DataSet.getTargetEntityType();
+		this._entitySetName = this.RetrieveEntityMetada(this._entityType);
 
 		//Table
 		this._container = document.createElement("table");
@@ -328,7 +329,7 @@ export class StatusReasonKanban implements ComponentFramework.StandardControl<II
 
 		const self = this; 
 		var req = new XMLHttpRequest();
-		req.open("PATCH", Xrm.Page.context.getClientUrl() + "/api/data/v9.1/"+Helper.CorrectEntityLogicalName(entityType)+"("+this._selectedRecord.id+")", true);
+		req.open("PATCH", Xrm.Page.context.getClientUrl() + "/api/data/v9.1/"+this._entitySetName+"("+this._selectedRecord.id+")", true);
 		req.setRequestHeader("OData-MaxVersion", "4.0");
 		req.setRequestHeader("OData-Version", "4.0");
 		req.setRequestHeader("Accept", "application/json");
@@ -347,6 +348,41 @@ export class StatusReasonKanban implements ComponentFramework.StandardControl<II
 			}
 		};
 		req.send(JSON.stringify(updateRequest));
+	}
+
+		/**
+	 * Retrieve EntitySetName
+	 * @param entityLogicalName 
+	 */
+	private RetrieveEntityMetada(entityLogicalName : string) : string
+	{
+		let entitySet : string;
+		entitySet = "";
+		let req = new XMLHttpRequest();
+    	req.open("GET", Xrm.Page.context.getClientUrl() + "/api/data/v9.1/" + "EntityDefinitions(LogicalName='"+entityLogicalName+"')?$select=EntitySetName", false);
+		req.setRequestHeader("Accept", "application/json");
+		req.setRequestHeader("Content-Type", "application/json; charset=utf-8");
+		req.setRequestHeader("OData-MaxVersion", "4.0");
+		req.setRequestHeader("OData-Version", "4.0");
+		req.onreadystatechange = function ()
+		{
+			if (this.readyState === 4)
+			{
+				req.onreadystatechange = null;
+				if (this.status === 200)
+				{
+					var result = JSON.parse(this.response);
+					entitySet = result.EntitySetName;
+				}
+				else
+				{
+					entitySet = "";
+				}
+			}
+		};
+		req.send();
+
+		return entitySet;
 	}
 
 	/**

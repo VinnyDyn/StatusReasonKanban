@@ -9,33 +9,6 @@
           "build/Microsoft.PowerApps.MSBuild.Pcf.targets": {}
         }
       }
-    },
-    ".NETFramework,Version=v4.6.2/win": {
-      "Microsoft.PowerApps.MSBuild.Pcf/0.4.3": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.PowerApps.MSBuild.Pcf.props": {},
-          "build/Microsoft.PowerApps.MSBuild.Pcf.targets": {}
-        }
-      }
-    },
-    ".NETFramework,Version=v4.6.2/win-x64": {
-      "Microsoft.PowerApps.MSBuild.Pcf/0.4.3": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.PowerApps.MSBuild.Pcf.props": {},
-          "build/Microsoft.PowerApps.MSBuild.Pcf.targets": {}
-        }
-      }
-    },
-    ".NETFramework,Version=v4.6.2/win-x86": {
-      "Microsoft.PowerApps.MSBuild.Pcf/0.4.3": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.PowerApps.MSBuild.Pcf.props": {},
-          "build/Microsoft.PowerApps.MSBuild.Pcf.targets": {}
-        }
-      }
     }
   },
   "libraries": {
@@ -98,17 +71,6 @@
             "version": "[0.*, )"
           }
         }
-      }
-    },
-    "runtimes": {
-      "win": {
-        "#import": []
-      },
-      "win-x64": {
-        "#import": []
-      },
-      "win-x86": {
-        "#import": []
       }
     }
   }

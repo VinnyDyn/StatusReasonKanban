@@ -3,3 +3,7 @@
 /out
 VinnyBControls/
 CustomWorkflow/VinnyB.KanbanStatusReason/bin
+
+# msbuild output directories
+/bin
+/obj
