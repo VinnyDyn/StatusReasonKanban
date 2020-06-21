@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-  <control 
-  namespace="VinnyBControls" 
-  constructor="StatusReasonKanban" 
-  version="1.0.0" 
-  display-name-key="StatusReason Kanban" 
-  description-key="" 
-  control-type="standard"
-  preview-image="img/iconfinder_7_2177457.png">
+  <control namespace="VinnyBControls" constructor="StatusReasonKanban" version="1.0.0" display-name-key="OptionSet Kanban" description-key="" control-type="standard" preview-image="img/iconfinder_7_2177457.png">
 
-    <data-set name="DataSet" display-name-key="Entity DataSet">
+    <data-set name="DataSet" display-name-key="Entity DataSet" cds-data-set-options="displayCommandBar:false;displayViewSelector:true;displayquickfind:true">
     </data-set>
 
     <resources>
       <code path="index.ts" order="1"/>
       <css path="css/StatusReasonKanban.css" order="1" />
-      <img path="img/iconfinder_7_2177457.png" />
     </resources>
+
+    <feature-usage>
+      <uses-feature name="WebAPI" required="true" />
+    </feature-usage>
 
   </control>
 </manifest>

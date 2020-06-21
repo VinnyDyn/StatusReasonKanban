@@ -1,36 +1,85 @@
-table.Container
+.buttons
 {
-    width: auto;
-    height: 100%;
-    background-color: transparent;
+    margin: 10px;
+    border-radius: 3px;
+    background-color: whitesmoke;
 }
 
-td.Option
+.buttons > button
 {
-    width: 300px;
-    height: 300px;
     margin: 5px;
+    padding: 3px;
+    border-style: solid;
+    border-radius: 3px;
+    border-width: 1px;
+    color: white;
+    background-color: cornflowerblue;
+    cursor: pointer;
+}
+
+.buttons > label
+{
+    font-size: 18px;
+    float: right;
+    margin: 5px;
+}
+
+div.flex
+{
+    display: flex;
+}
+
+#kanban
+{
+    margin: 10px;
+    width: auto;
+    background-color: whitesmoke;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+div.option
+{
     text-align: center;
     vertical-align: top;
-    border-right: solid;
+    border-right-style: dotted;
+    border-right-width: 1.5px;
+    flex: 1;
+    overflow-y: scroll;
+    height: 400px;
 }
 
-div.RecordGrab
+div.title
+{
+    border-radius: 3px;
+    margin-bottom: 10px;
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+}
+
+div.recordgrab
 {
     height: auto;
-    background-color: whitesmoke;
-    margin: 5px;
+    background-color: white;
+    margin: 7.5px;
     padding: 5px;
-    cursor: -webkit-grab; 
     cursor: grab;
+    border-radius: 3px;
+    border-style: dotted;
+    border-width: 1px;
+    text-align: left;
 }
 
-div.RecordGrabbing
+div.recordgrabing
 {
     height: auto;
-    background-color: whitesmoke;
-    margin: 5px;
+    background-color: white;
+    margin: 7.5px;
     padding: 5px;
-    cursor: -webkit-grabbing; 
     cursor: grabbing;
+    border-radius: 3px;
+    border-style: dotted;
+    border-width: 1px;
+    text-align: left;
 }
