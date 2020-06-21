@@ -9,15 +9,6 @@ Convert a simple view to a Kanban, the optionssets on present in the view will d
 - Views (if the view is added a dashboard, the Quick Find and View Selector wont displayed)
 - Sub Grids
 
-### Prerequisites
-The component needs at least one attribute of type option set (StatusCode or OptionSet) on view.
-
-#### Ready to use
-The [managed](https://github.com/VinnyDyn/StatusReasonKanban/releases/download/1.0.0/VinnyBControls_1_0_0_0_managed.zip) solution is ideal for non developers. Import and use.
-
-#### Developers
-The PCF call a Action (process) to obtain informations about the statuscode of entity, import the [unmanaged](https://github.com/VinnyDyn/StatusReasonKanban/releases/download/1.0.0/VinnyBControls_1_0_0_0.zip) solution with the action 'vnb_RetrieveOptionSetMetadata' to tests.
-
 ### Features
 - Respect the View Selector.
 - Display Search Box.
@@ -28,6 +19,12 @@ The PCF call a Action (process) to obtain informations about the statuscode of e
 - Attributes will be displayed based on the associated view and if they has value.
 - With a double click, access the form record.
 - No custom workflows or actions.
+
+### Prerequisites
+The component needs at least one attribute of type option set (StatusCode or OptionSet) on view.
+
+#### Ready to use
+The [managed](https://github.com/VinnyDyn/StatusReasonKanban/releases/tag/1.9.4.0) solution is ideal for non developers. Import and use.
 
 ### Incompatible with
 - Specials status change: WonOpportunity, IncidentResolution, CloseQuoteRequest, etc..
